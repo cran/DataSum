@@ -7,13 +7,13 @@
 DataSumm(data)
 }
 \arguments{
-\item{data}{A data frame.}
+\item{data}{A data frame (tibble is also ok).}
 }
 \value{
-A data frame with summary statistics for each column.
+A data frame, one row per input column.
 }
 \description{
-This function summarizes each column of a data frame by calculating various statistics.
+Applies \code{Datum()} to each column of a data frame and binds the results.
 }
 \examples{
 DataSumm(iris)

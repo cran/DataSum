@@ -1,8 +1,10 @@
-37eeb435e5ca8f8555665ca1807b5aa2 *DESCRIPTION
+6290ef57f108c5862efd93f762b4b0d8 *DESCRIPTION
 f08e8b18efadcc8cad5c31516f2cb8bd *NAMESPACE
-4a809ca0bca1e344ea1fa3374813a88a *R/datasum.R
+a63685357f3a8991ea93305784d98635 *R/datasum.R
 9937291f05f9616755c0860c6b9827f4 *README.md
-cfd405c95d4c215186074bc435f71485 *man/DataSumm.Rd
-a5e175d73b77fc9c9379657f85660779 *man/Datum.Rd
-820222d838cf506e7bc144c360f04a44 *man/getmode.Rd
-7921bb1368ffd8d09a2ae66a83186e34 *man/shapiro_normality_test.Rd
+45877998047ac3cedcf3399e457a5d6d *man/DataSumm.Rd
+5e2c5e8a64ad473381df0787628bd013 *man/Datum.Rd
+dbd5039de33940c35834c0672139b836 *man/getmode.Rd
+d4df5938eccaed4380fca273929e4c29 *man/shapiro_normality_test.Rd
+2c8d5a1eedb32239d591efe31b8bbbd3 *tests/testthat.R
+a2b384a360034de47d5376e216e4a1ae *tests/testthat/test-datasum.R

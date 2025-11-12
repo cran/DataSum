@@ -7,14 +7,17 @@
 Datum(data)
 }
 \arguments{
-\item{data}{A numeric, character, or factor vector.}
+\item{data}{A numeric, character, factor, or other vector.}
 }
 \value{
-A data frame with summary statistics.
+A one-row \code{data.frame} with summary statistics.
 }
 \description{
-This function summarizes a single vector by calculating various statistics.
+Summarizes a single vector by calculating a consistent set of statistics.
+Numeric vectors include mean/median/variance/sd/min/max/range/skewness/kurtosis
+and a normality decision. Character/factor vectors report the mode only.
 }
 \examples{
 Datum(rnorm(100))
+Datum(factor(sample(letters[1:3], 20, TRUE)))
 }

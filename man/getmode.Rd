@@ -2,19 +2,26 @@
 % Please edit documentation in R/datasum.R
 \name{getmode}
 \alias{getmode}
-\title{Get Mode of a Numeric Vector}
+\title{Get Mode of a Vector (numeric/character/factor)}
 \usage{
-getmode(data)
+getmode(x, collapse = TRUE)
 }
 \arguments{
-\item{data}{A numeric vector.}
+\item{x}{A vector (numeric, character, factor, etc.).}
+
+\item{collapse}{Logical; if TRUE (default), return all modes as a single
+comma-separated string. If FALSE, return the first mode only.}
 }
 \value{
-The mode of the numeric vector.
+A single value (first mode) or a comma-separated string of modes.
 }
 \description{
-This function calculates the mode of a numeric vector.
+Returns the mode(s) of a vector. By default, returns a single string with
+all modes collapsed by comma when there are ties. If you need only one mode,
+set \code{collapse = FALSE} to return the first mode deterministically.
 }
 \examples{
 getmode(c(1, 2, 2, 3, 4))
+getmode(c("a", "b", "b", "a"), collapse = TRUE)
+getmode(c("a", "b", "b", "a"), collapse = FALSE)
 }

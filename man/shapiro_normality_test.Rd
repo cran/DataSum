@@ -2,7 +2,7 @@
 % Please edit documentation in R/datasum.R
 \name{shapiro_normality_test}
 \alias{shapiro_normality_test}
-\title{Perform Normality Test}
+\title{Shapiro/Anderson-Darling Normality Decision}
 \usage{
 shapiro_normality_test(data)
 }
@@ -10,10 +10,11 @@ shapiro_normality_test(data)
 \item{data}{A numeric vector.}
 }
 \value{
-A character string indicating whether the data is "Normal" or "Not Normal".
+Character scalar: "Normal", "Not Normal", or \code{NA} if not applicable.
 }
 \description{
-This function performs the Shapiro-Wilk test if the sample size is between 3 and 5000. Otherwise, it performs the Anderson-Darling test.
+Performs Shapiro-Wilk for sample sizes between 3 and 5000 (inclusive),
+otherwise uses Anderson–Darling. Returns "Normal" if p > 0.05, else "Not Normal".
 }
 \examples{
 shapiro_normality_test(rnorm(100))
