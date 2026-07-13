@@ -1,0 +1,61 @@
+---
+title: "Getting started with DataSum"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting started with DataSum}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
+
+# Why DataSum?
+
+DataSum is built for the first serious look at a dataset. Before modeling,
+teaching, or publication, analysts need to know what is missing, what is unusual,
+which variables are skewed, whether normality checks are meaningful, and which
+columns need closer inspection.
+
+```{r setup}
+library(DataSum)
+```
+
+# Summarize one variable
+
+```{r vector}
+summarize_vector(c(1, 2, 2, NA, 10), name = "score")
+```
+
+# Summarize a data frame
+
+```{r data}
+summarize_data(iris)
+```
+
+Grouped summaries are useful for teaching and comparative research workflows.
+
+```{r grouped}
+summarize_data(iris, by = "Species")
+```
+
+# Profile a dataset
+
+```{r profile}
+profile <- profile_data(iris)
+profile$dataset
+profile$warnings
+```
+
+# Create a report scaffold
+
+```{r report}
+report_path <- datasum_report(iris, format = "qmd", render = FALSE)
+file.exists(report_path)
+```
+
+The generated Quarto source contains the dataset overview, variable diagnostics,
+warnings, formula definitions, and interpretation notes. Rendering HTML, PDF, or
+DOCX output is available when the optional `quarto` package and Quarto CLI are
+installed.

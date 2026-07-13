@@ -1,0 +1,20 @@
+citHeader("To cite DataSum in publications, use:")
+
+bibentry(
+  bibtype = "Manual",
+  title = "DataSum: Modern Data Summaries and Diagnostic Reports for Statistical Analysis",
+  author = c(
+    person(given = "Uzair Javid", family = "Khan"),
+    person(given = "Immad Ahmad", family = "Shah"),
+    person(given = "Sukhdev", family = "Mishra")
+  ),
+  year = "2026",
+  note = "R package version 1.0.0",
+  url = "https://CRAN.R-project.org/package=DataSum",
+  doi = "10.32614/CRAN.package.DataSum",
+  textVersion = paste(
+    "Uzair Javid Khan, Immad Ahmad Shah, and Sukhdev Mishra (2026).",
+    "DataSum: Modern Data Summaries and Diagnostic Reports for Statistical Analysis.",
+    "R package version 1.0.0. https://CRAN.R-project.org/package=DataSum"
+  )
+)
